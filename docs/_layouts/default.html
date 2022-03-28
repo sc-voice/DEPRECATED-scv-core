@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title aria-label="about voice">
+      About Voice
+    </title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async 
+        src="https://www.googletagmanager.com/gtag/js?id=UA-165918023-1">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-165918023-1');
+    </script>
+
+{% seo %}
+    <link rel="icon" 
+        href="https://sc-voice.github.io/sc-voice/wheel100.png" 
+        type="image/x-icon"/>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div>
+          <a href="https://voice.suttacentral.net"
+            class="header-link"
+            aria-label="go to voice website"
+            target="_blank"
+            >voice.suttacentral.net</a>
+        </div>
+        <div>
+          <a href="/sc-voice"
+            class="header-main"
+            aria-label="about voice"
+            >About&nbsp;Voice </a>
+        </div>
+      </header>
+
+      <section>
+        {{ content }}
+
+        <bottom-nav>
+{% if page.prev %}
+          <div style="inline-block">
+            <a href="{{page.prev_href}}" 
+              class="nav-button"
+              aria-label="back: {{page.prev_aria}}">
+                {{page.prev}}&nbsp;<img 
+                  src="/sc-voice/assets/img/lft-arrow.png"
+                  class="nav-img"/>
+            </a>
+          </div>
+{% endif %}
+          <div style="inline-block">&nbsp;</div>
+{% if page.next %}
+          <div style="inline-block">
+            <a href="{{page.next_href}}" 
+              class="nav-button"
+              aria-label="next: {{page.next_aria}}">
+                <img src="/sc-voice/assets/img/rht-arrow.png"
+                  class="nav-img"
+                  />&nbsp;{{page.next}}
+            </a>
+          </div>
+{% endif %}
+        </bottom-nav>
+      </section>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    {% if site.google_analytics %}
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', '{{ site.google_analytics }}', 'auto');
+        ga('send', 'pageview');
+      </script>
+    {% endif %}
+  </body>
+</html>

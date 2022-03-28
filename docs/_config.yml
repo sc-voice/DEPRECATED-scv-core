@@ -1,0 +1,4 @@
+theme: jekyll-theme-dinky
+markdown: GFM
+GFM:
+  parse_block_html: true

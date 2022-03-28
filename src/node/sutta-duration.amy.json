@@ -1,0 +1,77 @@
+{
+  "type": "Sequential",
+  "nIn": 3,
+  "nOut": 3,
+  "layers": [
+    {
+      "type": "MapLayer",
+      "id": 0,
+      "weights": {},
+      "fmap": [
+        "function anonymous(eIn\n/*``*/) {\nreturn  eIn[0]\n}",
+        "function anonymous(eIn\n/*``*/) {\nreturn  eIn[1]\n}",
+        "function anonymous(eIn\n/*``*/) {\nreturn  eIn[2]\n}"
+      ]
+    },
+    {
+      "type": "Layer",
+      "id": 1,
+      "nOut": 3,
+      "activation": "identity"
+    }
+  ],
+  "inStats": [
+    {
+      "max": 37028.40262382789,
+      "min": 10.88438446096599,
+      "mean": 18519.64350414443,
+      "std": 16323.191235693737
+    },
+    {
+      "max": 47635.59737617211,
+      "min": 0.0012991360428952874,
+      "mean": 23817.799337654076,
+      "std": 21005.32346236024
+    },
+    {
+      "max": 7.02197642307216,
+      "min": 2.302585092994046,
+      "mean": 4.662280758033103,
+      "std": 2.0810559664968387
+    }
+  ],
+  "fNormIn": [
+    "function anonymous(x\n/*``*/) {\nreturn (x - 18519.643504144427)*0.00005402847341270613\n}",
+    "function anonymous(x\n/*``*/) {\nreturn (x - 23817.799337654076)*0.00004198540933056887\n}",
+    "function anonymous(x\n/*``*/) {\nreturn (x - 4.662280758033103)*0.42378346276423245\n}"
+  ],
+  "weights": {
+    "w1b0": 89.71320105628457,
+    "w1r0c0": 13.398517168112296,
+    "w1r0c1": -20.664582767822598,
+    "w1r0c2": 5.451391133116162,
+    "w1b1": 0.007713645931169503,
+    "w1r1c0": -0.43605630613574664,
+    "w1r1c1": 0.3904334417005477,
+    "w1r1c2": 0.056270099116080045,
+    "w1b2": 2.3025851091270204,
+    "w1r2c0": -0.0000010967143782033047,
+    "w1r2c1": 9.819694460351826e-7,
+    "w1r2c2": 1.415235275082194e-7
+  },
+  "gradExpr": {
+    "w1b0": "w1b0 - yt0 + w1r0c0 * x0 + w1r0c1 * x1 + w1r0c2 * x2",
+    "w1b1": "w1b1 - yt1 + w1r1c0 * x0 + w1r1c1 * x1 + w1r1c2 * x2",
+    "w1b2": "w1b2 - yt2 + w1r2c0 * x0 + w1r2c1 * x1 + w1r2c2 * x2",
+    "w1r0c0": "x0 * (w1b0 - yt0 + w1r0c0 * x0 + w1r0c1 * x1 + w1r0c2 * x2)",
+    "w1r0c1": "x1 * (w1b0 - yt0 + w1r0c0 * x0 + w1r0c1 * x1 + w1r0c2 * x2)",
+    "w1r0c2": "x2 * (w1b0 - yt0 + w1r0c0 * x0 + w1r0c1 * x1 + w1r0c2 * x2)",
+    "w1r1c0": "x0 * (w1b1 - yt1 + w1r1c0 * x0 + w1r1c1 * x1 + w1r1c2 * x2)",
+    "w1r1c1": "x1 * (w1b1 - yt1 + w1r1c0 * x0 + w1r1c1 * x1 + w1r1c2 * x2)",
+    "w1r1c2": "x2 * (w1b1 - yt1 + w1r1c0 * x0 + w1r1c1 * x1 + w1r1c2 * x2)",
+    "w1r2c0": "x0 * (w1b2 - yt2 + w1r2c0 * x0 + w1r2c1 * x1 + w1r2c2 * x2)",
+    "w1r2c1": "x1 * (w1b2 - yt2 + w1r2c0 * x0 + w1r2c1 * x1 + w1r2c2 * x2)",
+    "w1r2c2": "x2 * (w1b2 - yt2 + w1r2c0 * x0 + w1r2c1 * x1 + w1r2c2 * x2)"
+  },
+  "costFunExpr": "((w1b0+w1r0c0*x0+w1r0c1*x1+w1r0c2*x2-yt0)^2+(w1b1+w1r1c0*x0+w1r1c1*x1+w1r1c2*x2-yt1)^2+(w1b2+w1r2c0*x0+w1r2c1*x1+w1r2c2*x2-yt2)^2)/2"
+}

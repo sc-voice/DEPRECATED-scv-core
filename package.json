@@ -1,0 +1,86 @@
+{
+  "name": "scv-core",
+  "version": "2.20.0",
+  "description": "SuttaCentral Voice NodeJS core",
+  "main": "index.js",
+  "private": false,
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1101.0",
+    "axios": "^0.21.4",
+    "axis": "^1.0.0",
+    "compression": "^1.7.4",
+    "credentials": "^3.0.2",
+    "express": "^4.17.3",
+    "express-jwt": "^6.0.0",
+    "just-simple": "^0.1.11",
+    "memo-again": "^0.4.0",
+    "npm": "^8.5.0",
+    "oya-ann": "^0.2.1",
+    "promise-queue": "^2.2.5",
+    "say-again": "^0.2.12",
+    "scv-bilara": "^3.15.0",
+    "scv-rb": "^2.3.0",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "json": "^10.0.0",
+    "mocha": "^7.1.1",
+    "rimraf": "^2.6.2",
+    "should": "^11.2.0"
+  },
+  "scripts": {
+    "schedule-action": "scripts/schedule-action",
+    "clear:sounds": "rimraf local/sounds",
+    "dev": "npm run build; echo 'UI-only service'; npm run serve",
+    "start": "npm run build; scripts/sc-voice.js",
+    "start:3000": "npm run build; scripts/sc-voice.js -3000",
+    "start:ssl": "npm run build; scripts/sc-voice.js --ssl",
+    "start:staging": "npm run build; scripts/sc-voice.js --staging",
+    "test": "npm run test:verbose",
+    "test:test": "mocha -w --watch-ignore node_modules,.git,local -R min --inline-diffs -g TEST",
+    "test:verbose": "mocha --inline-diffs",
+    "test:watch": "mocha -w --inline-diffs"
+  },
+  "repository": {
+    "tag": "git"
+  },
+  "bin": {},
+  "keywords": [
+    "SuttaCentral",
+    "translation",
+    "Javascript",
+    "Pootl"
+  ],
+  "author": "Karl Lew",
+  "homepage": "https://github.com/suttacentral/translation",
+  "license": "MIT",
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "no-console": "off"
+    },
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

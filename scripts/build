@@ -1,0 +1,8 @@
+#!/bin/bash
+DIR=`dirname $0`
+SCRIPT=`basename $0 | tr abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+echo -e "$SCRIPT\t: BEGIN `date`"
+
+$DIR/schedule-action
+
+echo -e "$SCRIPT\t: END `date`"

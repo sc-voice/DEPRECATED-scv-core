@@ -1,0 +1,152 @@
+---
+---
+
+@import 'jekyll-theme-dinky';
+
+h1,h2,h3,h4,h5 {
+  font-family: Helvetica, sans-serif;
+  margin-top: 1.5em;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 20px;
+}
+h3 {
+  font-size: 16px;
+}
+
+.kbd,kbd {
+    background: #ccc;
+    color: #000;
+    padding: 1pt;
+    font-family: monospace;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+    border-radius: 0.2em;
+    border-bottom: gray;
+    border-right: gray;
+}
+blockquote {
+    border-left: 0.2rem solid #ccc;
+}
+blockquote > ul {
+    margin-top: -15px;
+}
+header {
+  min-width: 250px !important;
+  border: none;
+  background-image: url("/sc-voice/assets/img/candle.png");
+  background-repeat: no-repeat;
+  background-size: 192px;
+  background-position: right -30px bottom -6px;
+  min-width: 200px;
+  font-size: 24px;
+  font-family: Helvetica, sans-serif;
+  line-height: 1em;
+  padding: 24px 0px 30px 20px;
+}
+@media print, screen and (max-width: 720px)  {
+  header {
+    padding: 14px 0px 20px 20px;
+    margin-right: 0;
+  }
+}
+.header-link {
+  font-size: 12.7px;
+  font-style: italic;
+  text-decoration: none;
+  line-height: 1em;
+  margin-top: 0.2em;
+  color: #ce8400;
+}
+.header-main {
+  font-size: 24px;
+  line-height: 1.1em;
+  text-decoration: none;
+}
+.header-main:hover {
+  color: #ffffff;
+}
+
+a {
+  text-decoration: underline;
+  color: #232323;
+  font-weight: 400;
+}
+a:hover {
+  color: #754A00;
+}
+a:focus {
+  color: #754A00;
+}
+
+bottom-nav {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 0.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background-color: #ffffff;
+  border-top: 1pt solid #FBFAF7;
+}
+@media screen and (min-width: 768px) {
+  bottom-nav {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.nav-button {
+  color: #222;
+  border-radius: 3pt;
+  border-style: solid;
+  border-width: 1pt;
+  border-color: #222;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  padding-top: 0.2em;
+  padding-bottom: 0.3em;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+.nav-button:focus {
+  border-color: #c9e1f7; 
+}
+.nav-img {
+  width: 1.1em;
+  height: 1em;
+  position: relative;
+  margin: 0;
+  margin-bottom: -0.15em;
+  border: none;
+  padding:0;
+}
+summary > h3 {
+  display: inline-block;
+}
+summary > h4 {
+  display: inline-block;
+}
+footer {
+  bottom: 41px;
+  color: #666;
+}
+footer > a {
+  color: #a44;
+  font-style: italic;
+}
+.welcome-img {
+  margin-top: 5em;
+  height: 75px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}

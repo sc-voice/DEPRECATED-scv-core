@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "json": "^10.0.0",
-    "mocha": "^7.1.1",
+    "mocha": "^9.2.2",
     "rimraf": "^2.6.2",
     "should": "^11.2.0"
   },

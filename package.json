@@ -1,6 +1,6 @@
 {
   "name": "scv-core",
-  "version": "2.21.72",
+  "version": "2.21.73",
   "description": "SuttaCentral Voice NodeJS core",
   "main": "index.js",
   "private": false,
@@ -21,7 +21,7 @@
     "oya-ann": "^0.2.1",
     "promise-queue": "^2.2.5",
     "say-again": "^0.2.12",
-    "scv-bilara": "^3.40.8",
+    "scv-bilara": "^3.40.10",
     "scv-rb": "^2.3.0",
     "serve-favicon": "^2.5.0"
   },
